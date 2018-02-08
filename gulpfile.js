@@ -1302,6 +1302,7 @@ gulp.task('dist-pre', ['generic', 'components', 'lib', 'minified'], function() {
       type: 'git',
       url: DIST_REPO_URL,
     },
+    types: 'types/pdf.d.ts',
   };
   var packageJsonSrc =
     createStringSource('package.json', JSON.stringify(npmManifest, null, 2));
@@ -1319,6 +1320,8 @@ gulp.task('dist-pre', ['generic', 'components', 'lib', 'minified'], function() {
     createStringSource('bower.json', JSON.stringify(bowerManifest, null, 2));
 
   return merge([
+    gulp.src('external/types/*.d.ts')
+      .pipe(gulp.dest(DIST_DIR + 'types/')),
     gulp.src('external/streams/streams-lib.js', { base: '.', })
       .pipe(gulp.dest('build/dist/')),
     packageJsonSrc.pipe(gulp.dest(DIST_DIR)),

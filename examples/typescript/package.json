@@ -1,0 +1,23 @@
+{
+    "name": "pdfjstypestest",
+    "version": "1.0.0",
+    "description": "command line tool for analyzing pdfs",
+    "main": "index.js",
+    "scripts": {
+        "test": "jasmine-ts \"src/**/*.spec.ts\"",
+        "build": "tsc",
+        "watch": "tsc --watch"
+    },
+    "author": "",
+    "engines": {
+        "node": ">=8.0.0"
+    },
+    "dependencies": {
+        "@types/jasmine": "^2.8.4",
+        "@types/node": "^8.5.1",
+        "jasmine-ts": "^0.2.1",
+        "typescript": "^2.6.2",
+        "pdfjs-dist": "../../build/dist"
+    },
+    "license": "Apache-2.0"
+}
