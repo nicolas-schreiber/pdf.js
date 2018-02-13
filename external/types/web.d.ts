@@ -530,7 +530,7 @@ declare namespace _pdfjs {
   //
   // web/pdf_find_controller.js
   //
-  
+
   interface PDFFindControllerOptions { pdfViewer: PDFViewer, }
 
   interface FindCommandState {
@@ -921,4 +921,120 @@ declare namespace _pdfjs {
 
   // Constructor function
   let GenericL10n: new (lang: string) => GenericL10n;
+
+  //
+  // web/app.js
+  //
+  /**
+   * Shows the previous view position on loading the PDF
+   * @var {boolean}
+   * default: true
+   */
+  let showPreviousViewOnLoad: boolean;
+
+  /**
+   * Sets a default zoom value
+   * @var {string}
+   * default: ""
+   */
+  let defaultZoomValue: string;
+
+  /**
+   * The sidebar view on load
+   * @var {number}
+   * default: 0
+   */
+  let sidebarViewOnLoad: number;
+
+  /**
+   * Enables WebGL usage
+   * @var {boolean}
+   * default: false
+   */
+  let enableWebGL: boolean;
+
+  /**
+   * Enables the PDF debugging tool
+   * @var {boolean}
+   * default: false
+   */
+  let pdfBugEnabled: boolean;
+
+  /**
+   * Disables the Text Layer
+   * @var {boolean}
+   * default: false
+   */
+  let disableTextLayer: boolean;
+
+  /**
+   * Allows only the use of CSS Zoom
+   * @var {boolean}
+   * default: false
+   */
+  let useOnlyCssZoom: boolean;
+
+  /**
+   * Disables Page Mode
+   * @var {boolean}
+   * default: false
+   */
+  let disablePageMode: boolean;
+
+  /**
+   * Disables the Page Labels
+   * @var {boolean}
+   * default: false
+   */
+  let disablePageLabels: boolean;
+
+  //
+  // web/chromecom.js
+  //
+  /**
+   * Enables the Hand Tool on load
+   * @var {boolean}
+   * default: false
+   */
+  let enableHandToolOnLoad: boolean;
+
+  /**
+   * Enables the Cursor Tool on load
+   * @var {number}
+   * default: 0
+   */
+  let cursorToolOnLoad: number;
+
+  //
+  // web/base_viewer.js
+  //
+  /**
+   * Enhances the Text Selection in the Text Layer
+   * (Works only if disableTextLayer is true)
+   * @var {boolean}
+   * default: false
+   */
+  let enhanceTextSelection: boolean;
+
+  /**
+   * Allows to define a renderer
+   * @var {string}
+   * default: canvas
+   */
+  let renderer: string;
+
+  /**
+   * Activate rendering of interactive forms
+   * @var {boolean}
+   * default: false
+   */
+  let renderInteractiveForms: boolean;
+
+  /**
+   * Enables autorotating when printing
+   * @var {boolean}
+   * default: false
+   */
+  let enablePrintAutoRotate: boolean;
+
 }

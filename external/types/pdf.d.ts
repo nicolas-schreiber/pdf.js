@@ -78,6 +78,8 @@ declare module 'pdfjs-dist' {
 
   //
   // web/pdf_viewer.component.js
+  // Warning: These functions are only accessible with web/pdf_viewer.js.
+  //          It is NOT automatically imported with 'pdfjs-dist'.
   //
   export namespace PDFJS {
     export import PDFViewer = _pdfjs.PDFViewer;
@@ -96,6 +98,21 @@ declare module 'pdfjs-dist' {
     export import ProgressBar = _pdfjs.ProgressBar;
     export import GenericL10n = _pdfjs.GenericL10n;
     export import NullL10n = _pdfjs.NullL10n;
+    export import showPreviousViewOnLoad = _pdfjs.showPreviousViewOnLoad;
+    export import defaultZoomValue = _pdfjs.defaultZoomValue;
+    export import sidebarViewOnLoad = _pdfjs.sidebarViewOnLoad;
+    export import enableHandToolOnLoad = _pdfjs.enableHandToolOnLoad;
+    export import cursorToolOnLoad = _pdfjs.cursorToolOnLoad;
+    export import enableWebGL = _pdfjs.enableWebGL;
+    export import pdfBugEnabled = _pdfjs.pdfBugEnabled;
+    export import disableTextLayer = _pdfjs.disableTextLayer;
+    export import useOnlyCssZoom = _pdfjs.useOnlyCssZoom;
+    export import enhanceTextSelection = _pdfjs.enhanceTextSelection;
+    export import renderer = _pdfjs.renderer;
+    export import renderInteractiveForms = _pdfjs.renderInteractiveForms;
+    export import enablePrintAutoRotate = _pdfjs.enablePrintAutoRotate;
+    export import disablePageMode = _pdfjs.disablePageMode;
+    export import disablePageLabels = _pdfjs.disablePageLabels;
   }
 
   //
